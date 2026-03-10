@@ -90,12 +90,20 @@ margin-top:20px;
 <button onclick="downloadProject()">Download Project Idea</button>
 <button onclick="createAppPackage()">Create App Package</button>
 <h3>Generated Blocks:</h3>
-
+<button onclick="copyCode()">Copy Code</button>
 <div id="output"></div>
 
 </div>
 
 <script>
+function copyCode(){
+
+let text = document.getElementById("output").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Code copied!");
+}
 function createAppPackage(){
 
 let content = `
